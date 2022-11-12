@@ -50,6 +50,7 @@ public class Shelf {
 
         Book newBook = new Book(title, publisher, author, publishingYear, numberOfPages);
         books.put(title, newBook);
+        authors.get(name).addBookWrote(newBook);
 
         System.out.print("\n~Book on the shelf~\n");
     }
