@@ -3,7 +3,7 @@ package trizq;
 public class Book {
     String title, publisher;
     Author author;
-    int publishingYear, numberOfPages;
+    int publishingYear, numberOfPages, numberOfPagesRead = 0;
     boolean read = false;
 
     public Book(String title, String publisher, Author author, int publishingYear, int numberOfPages) {
@@ -34,11 +34,38 @@ public class Book {
         return numberOfPages;
     }
 
+    public int getNumberOfPagesRead() {
+        return numberOfPagesRead;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public void setPublishingYear(int publishingYear) {
+        this.publishingYear = publishingYear;
+    }
+
+    public void setNumberOfPages(int numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
+    public void setNumberOfPagesRead(int numberOfPagesRead) {
+        this.numberOfPagesRead = numberOfPagesRead;
+    }
+
     public boolean wasRead() {
         return read;
     }
 
-    public void setRead(boolean read) {
-        this.read = read;
+    public void setRead() {
+        this.read = true;
+    }
+    public void setUnread() {
+        this.read = false;
     }
 }
